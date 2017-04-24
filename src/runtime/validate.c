@@ -37,7 +37,7 @@ ensure_space(lispobj *start, uword_t size)
     //             "(hint: Try \"ulimit -a\"; maybe you should increase memory limits.)\n");
     //     exit(1);
     // }
-    printf("This version of SBCL is modified by Docker team to stop validations.")
+    printf("This version of SBCL is modified by Docker team to stop validations.");
 }
 
 os_vm_address_t undefined_alien_address = 0;
