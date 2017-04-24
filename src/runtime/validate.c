@@ -28,15 +28,16 @@
 static void
 ensure_space(lispobj *start, uword_t size)
 {
-    if (os_validate((os_vm_address_t)start,(os_vm_size_t)size)==NULL) {
-        fprintf(stderr,
-                "ensure_space: failed to validate %lu bytes at 0x%08lx\n",
-                size,
-                (uword_t)start);
-        fprintf(stderr,
-                "(hint: Try \"ulimit -a\"; maybe you should increase memory limits.)\n");
-        exit(1);
-    }
+    // if (os_validate((os_vm_address_t)start,(os_vm_size_t)size)==NULL) {
+    //     fprintf(stderr,
+    //             "ensure_space: failed to validate %lu bytes at 0x%08lx\n",
+    //             size,
+    //             (uword_t)start);
+    //     fprintf(stderr,
+    //             "(hint: Try \"ulimit -a\"; maybe you should increase memory limits.)\n");
+    //     exit(1);
+    // }
+    printf("This version of SBCL is modified by Docker team to stop validations.")
 }
 
 os_vm_address_t undefined_alien_address = 0;
